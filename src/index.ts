@@ -16,7 +16,7 @@ app.get("/books", (req: Request, res: Response) => {
   })
   
 app.get("/books/:id", (req: Request, res: Response) => {
-   let book =  books.filter(bk => bk.id == +req.params.id) ? books.filter(bk => bk.id == +req.params.id) : null;
+   let book =  books.filter(bk => bk.id == +req.params.id) ? books.filter(bk => bk.id == +req.params.id) : "not found";
     res.status(200).send(book);
   })
 app.listen(8000,()=>{
