@@ -19,6 +19,13 @@ app.get("/books/:id", (req: Request, res: Response) => {
    let book =  books.filter(bk => bk.id == +req.params.id) ? books.filter(bk => bk.id == +req.params.id) : null;
     res.status(200).send(book);
   })
+
+app.get("/book/:id", (req: Request, res: Response) => {
+    let book =  books.filter(bk => bk.id == +req.params.id) ? books.filter(bk => bk.id == +req.params.id) : null;
+    let result = { book : book , verified : true};
+     res.status(200).send(result);
+   })
+
 app.listen(8000,()=>{
   console.log('Server Started at Port, 8000')
 })
