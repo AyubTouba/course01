@@ -27,6 +27,7 @@ app.get("/book/:id", (req: Request, res: Response) => {
    })
 
 app.get("/totalbooks", (req: Request, res: Response) => {
+  // We can get the length of an array just by using book.length()
      res.status(200).send(getlength(books));
    })
 
