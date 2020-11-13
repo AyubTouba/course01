@@ -26,11 +26,6 @@ app.get("/book/:id", (req: Request, res: Response) => {
      res.status(200).send(result);
    })
 
-app.get("/totalbooks", (req: Request, res: Response) => {
-  // We can get the length of an array just by using book.length()
-     res.status(200).send(getlength(books));
-   })
-
 app.listen(8000,()=>{
   console.log('Server Started at Port, 8000')
 })
